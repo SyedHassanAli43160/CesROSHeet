@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export to PDF</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #pdf-content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .table th,
+        .table td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-bordered {
+            border: 1px solid #ddd;
+        }
+
+        /* Prevent page breaks in between the content */
+        @media print {
+            .table {
+                page-break-inside: avoid;
+            }
+
+            #pdf-content {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="pdf-content">
+        <div class="row mb-3">
+            <div class="col-6">
+                <img src="/cesLogo.png" alt="Left Image" class="img-fluid" style="max-width: 40%;" />
+            </div>
+            <div class="col-6 text-right">
+                <img src="/iso.png" alt="Right Image" class="img-fluid" style="max-width: 30%;" />
+            </div>
+        </div>
+
+        <div class="table-responsive" >
+            <table class="table table-bordered" id="first-table">
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold; width: 20%;">COMPANY NAME:</td>
+                        <td style="width: 30%;">KIA LUCKY MOTOR</td>
+                        <td style="font-weight: bold; width: 20%;">DATE/TIME:</td>
+                        <td style="width: 30%;">July 03, 2022 11 am</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">ADDRESS:</td>
+                        <td>PORT QASIM</td>
+                        <td style="font-weight: bold;">SERVICE ENGINEER:</td>
+                        <td>Waqar Sheikh & Noman Ali</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">ATTENTION:</td>
+                        <td>MR. AYAZ AYUB</td>
+                        <td style="font-weight: bold;">COPY TO:</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container mt-5">
+            <h3 class="text-center mb-4">RO System Parameters</h3>
+
+            <!-- Table to display the data -->
+            <table class="table table-bordered" id="ro-table">
+                <thead>
+                    <tr>
+                        <th>S. #</th>
+                        <th>SECTIONS</th>
+                        <th>PARAMETERS</th>
+                        <th>RO # 1</th>
+                        <th>RO # 2</th>
+                        <th>RO # 3</th>
+                        <th>RO # 4</th>
+                        <th>RO # 5</th>
+                        <th>RO # 6</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pretreatment Section -->
+                    <tr>
+                        <td>1</td>
+                        <td rowspan="5"><strong>Pretreatment</strong></td>
+                        <td>Feed Water Temperature (°C)</td>
+                        <td>28</td>
+                        <td>28</td>
+                        <td>28</td>
+                        <td>28</td>
+                        <td>28</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Multimedia Inlet/Outlet (bar)</td>
+                        <td>3.6/3.4</td>
+                        <td>3.6/3.4</td>
+                        <td>3.6/3.4</td>
+                        <td>3.6/3.4</td>
+                        <td>3.6/3.4</td>
+                        <td>3.6/3.4</td>
+
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Multimedia Differential (bar)</td>
+                        <td>0.2</td>
+                        <td>0.2</td>
+                        <td>0.2</td>
+                        <td>0.2</td>
+                        <td>0.2</td>
+                        <td>0.2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Cartridge Filter Inlet/Outlet (bar)</td>
+                        <td>3.4/2.0</td>
+                        <td>3.4/2.0</td>
+                        <td>3.4/2.0</td>
+                        <td>3.4/2.0</td>
+                        <td>3.4/2.0</td>
+                        <td>3.4/2.0</td>
+
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Cartridge Filter Differential (bar)</td>
+                        <td>1.4</td>
+                        <td>1.4</td>
+                        <td>1.4</td>
+                        <td>1.4</td>
+                        <td>1.4</td>
+                        <td>1.4</td>
+
+                    </tr>
+
+                    <!-- Membrane Process Section -->
+                    <tr>
+                        <td>6</td>
+                        <td rowspan="7"><strong>Membrane Process</strong></td>
+                        <td>HP Pump Discharge Pressure (Psig)</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Membrane Feed Pressure (A) (Psig)</td>
+                        <td>156.6</td>
+                        <td>156.6</td>
+                        <td>156.6</td>
+                        <td>156.6</td>
+                        <td>156.6</td>
+                        <td>156.6</td>
+
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Inter Stage Pressure (B) (Psig)</td>
+                        <td>58</td>
+                        <td>58</td>
+                        <td>58</td>
+                        <td>58</td>
+                        <td>58</td>
+                        <td>58</td>
+
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Reject Pressure (C) (Psig)</td>
+                        <td>33.35</td>
+                        <td>33.35</td>
+                        <td>33.35</td>
+                        <td>33.35</td>
+                        <td>33.35</td>
+                        <td>33.35</td>
+
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Differential Pressure (A-B) (Psid)</td>
+                        <td>98.6</td>
+                        <td>98.6</td>
+                        <td>98.6</td>
+                        <td>98.6</td>
+                        <td>98.6</td>
+                        <td>98.6</td>
+
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Differential Pressure (B-C) (Psid)</td>
+                        <td>24.65</td>
+                        <td>24.65</td>
+                        <td>24.65</td>
+                        <td>24.65</td>
+                        <td>24.65</td>
+                        <td>24.65</td>
+
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Differential Pressure (A-C) (Psid)</td>
+                        <td>123.25</td>
+                        <td>123.25</td>
+                        <td>123.25</td>
+                        <td>123.25</td>
+                        <td>123.25</td>
+                        <td>123.25</td>
+
+                    </tr>
+
+                    <!-- Flow Section -->
+                    <tr>
+                        <td>13</td>
+                        <td rowspan="3"><strong>Flow</strong></td>
+                        <td>Feed Flow Rate (m3/Hr)</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>27</td>
+
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Product Flow Rate (m3/Hr)</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>18</td>
+
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Reject Flow Rate (m3/Hr)</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>9</td>
+
+                    </tr>
+
+                    <!-- Performance Section -->
+                    <tr>
+                        <td>16</td>
+                        <td rowspan="4" class="vertical-text"><strong>Performance</strong></td>
+                        <td>Salt Passage (%)</td>
+                        <td>6.3</td>
+                        <td>6.3</td>
+                        <td>6.3</td>
+                        <td>6.3</td>
+                        <td>6.3</td>
+                        <td>6.3</td>
+
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Salt Rejection (%)</td>
+                        <td>93.8</td>
+                        <td>93.8</td>
+                        <td>93.8</td>
+                        <td>93.8</td>
+                        <td>93.8</td>
+                        <td>93.8</td>
+
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Recovery (%)</td>
+                        <td>66.67</td>
+                        <td>66.67</td>
+                        <td>66.67</td>
+                        <td>66.67</td>
+                        <td>66.67</td>
+                        <td>66.67</td>
+
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Concentration Factor</td>
+                        <td>3.0</td>
+                        <td>3.0</td>
+                        <td>3.0</td>
+                        <td>3.0</td>
+                        <td>3.0</td>
+                        <td>3.0</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <table id="second-table" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Test-RO#1</th>
+                        <th>Feed</th>
+                        <th>Product</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PH Value</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Dissolved Solids(ppm CaCO3)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Total Alkalinity(ppm CaCO3)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Total Hardness(ppm CaCO3)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Calcium Hardness(ppm CaCO3)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Chloride(ppm Cl)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Total Iron(ppm Fe)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Free Chlorine(HOCL)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>SDI(Salt Density Index)</td>
+                        <td></td>
+                        <td>2.2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="third-table" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Test-RO#2</th>
+                        <th>Feed</th>
+                        <th>Product</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PH Value</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Dissolved Solids(ppm CaCO3)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Total Alkalinity(ppm CaCO3)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Total Hardness(ppm CaCO3)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Calcium Hardness(ppm CaCO3)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Chloride(ppm Cl)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Total Iron(ppm Fe)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Free Chlorine(HOCL)</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>SDI(Salt Density Index)</td>
+                        <td></td>
+                        <td>2.2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <label for="">Observations & Recommendation</label>
+                <textarea class="form-control" rows="5" cols="5" name="" id="" readonly>Product flow has been recoverd with partial recovery of membrane feed pressure and differential pressure across membrane. The feed water in use is classfied as "Surface Water" and rich in organic foulant and fine silt with SDI 15 minutes is immeasurable and the 0.45 micron choked in 90 seconds. This is recommended to take product flow 18 m3 per hour @ 50% recovery in order to ensure smooth and trouble free operation.
+                            </textarea>
+
+            </div>
+            <label for="">Chemical Dosage Profile</label>
+
+            <table id="fourth-table" class="table table-bordered">
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product</td>
+                        <td>Antiscalant</td>
+                        <td>Biocide</td>
+                        <td>Acid</td>
+                    </tr>
+                    <tr>
+                        <td>Recommended Dosage</td>
+                        <td>5 ppm</td>
+                        <td>2 ppm</td>
+                        <td>1.5 ppm</td>
+                    </tr>
+                    <tr>
+                        <td>Actual Dosage</td>
+                        <td>4 ppm</td>
+                        <td>2 ppm</td>
+                        <td>1 ppm</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+    <!-- Button to trigger the PDF generation -->
+    <div class="text-center mb-4">
+        <button class="btn btn-primary" onclick="generatePDF()">Export as PDF</button>
+    </div>
+
+    <!-- jsPDF & autoTable Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.16/jspdf.plugin.autotable.min.js"></script>
+
+<script>
+    function generatePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Logos (Header)
+        doc.addImage("/cesLogo.png", "PNG", 10, 10, 40, 20);
+        doc.addImage("/iso.png", "PNG", 160, 10, 40, 25);
+
+        // Header Info
+        let y = 45;
+
+        // Table 1
+        doc.autoTable({
+            html: '#first-table',
+            startY: y,
+            styles: { fontSize: 8 },
+            showHead: 'firstPage'  // Do not repeat the header when the table breaks across pages
+        });
+
+        // Update y after table 1
+        y = doc.lastAutoTable.finalY + 2;
+
+        // Table 2
+        doc.autoTable({
+            html: '#ro-table',
+            startY: y + 5,
+            styles: { fontSize: 8 },
+            showHead: 'firstPage'
+        });
+
+        // Update y after table 2
+        y = doc.lastAutoTable.finalY + 10;
+
+        // Table 3
+        doc.autoTable({
+            html: '#second-table',
+            startY: y,
+            styles: { fontSize: 8 },
+            showHead: 'firstPage'
+        });
+
+        // Update y after table 3
+        y = doc.lastAutoTable.finalY + 10;
+
+        // Table 4
+        doc.autoTable({
+            html: '#third-table',
+            startY: y,
+            styles: { fontSize: 8 },
+            showHead: 'firstPage'
+        });
+
+        y = doc.lastAutoTable.finalY + 5;
+        doc.setFontSize(12);
+        doc.text("Chemical Dosage Profile", 10, y);
+        y += 6;
+
+        doc.autoTable({
+            html: '#fourth-table',
+            startY: y,
+            styles: { fontSize: 8 },
+            showHead: 'firstPage'
+        });
+
+        y = doc.lastAutoTable.finalY + 10;
+
+        // Observations & Recommendations Text
+        doc.setFontSize(12);
+        doc.text("Observations & Recommendation", 10, y);
+        y += 7;
+        doc.setFontSize(10);
+
+        // Wrap the textarea text manually
+        const observationText = `Product flow has been recovered with partial recovery of membrane feed pressure and differential pressure across membrane. The feed water in use is classified as "Surface Water" and rich in organic foulant and fine silt with SDI 15 minutes is immeasurable and the 0.45 micron choked in 90 seconds. This is recommended to take product flow 18 m3 per hour @ 50% recovery in order to ensure smooth and trouble-free operation.`;
+
+        const splitText = doc.splitTextToSize(observationText, 190); // Wrap text to fit page width
+        doc.text(splitText, 10, y);
+        y += splitText.length * 5 + 5; // Adjust Y based on number of lines
+
+        // Get total number of pages
+        const pageCount = doc.internal.getNumberOfPages();
+
+        // Go to last page
+        doc.setPage(pageCount);
+
+        // Add signature images above footer
+        const pageHeight = doc.internal.pageSize.getHeight();
+        const signatureY = pageHeight - 70;  // Increase Y position for signatures to avoid footer overlap
+
+        // Signature 1 (Service Engineer)
+        doc.addImage("/serviceengineer_Signature.png", "PNG", 10, signatureY, 60, 20);  // Adjust size and position as needed
+        doc.text("Service Engineer", 10, signatureY + 25);  // Label below the first signature
+
+        // Signature 2 (Customer) moved further to the right
+        const signature2X = 140; // Increased X position to move it to the right
+        doc.addImage("/customer_Signature.png", "PNG", signature2X, signatureY, 60, 20);  // Adjust size and position as needed
+        doc.text("Customer", signature2X+30, signatureY + 25);  // Label below the second signature
+
+        // Add footer image at the bottom of the last page
+        doc.addImage("/footer.png", "PNG", 10, pageHeight - 20, 190, 12);  // Adjust position/size as needed
+
+        // Save PDF
+        doc.save('RO_System_Parameters_Report.pdf');
+    }
+</script>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
