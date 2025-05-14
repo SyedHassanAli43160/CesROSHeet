@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Export to PDF</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,15 +55,15 @@
 
     <div id="pdf-content">
         <div class="row mb-3">
-            <div class="col-6">
-                <img src="/cesLogo.png" alt="Left Image" class="img-fluid" style="max-width: 40%;" />
+            <div class="col-6 text-start">
+                <img src="/cesLogo.png" alt="Left Image" class="img-fluid" />
             </div>
-            <div class="col-6 text-right">
-                <img src="/iso.png" alt="Right Image" class="img-fluid" style="max-width: 30%;" />
+            <div class="col-6 text-end">
+                <img src="/iso.png" alt="Right Image" class="img-fluid"  />
             </div>
         </div>
 
-        <div class="table-responsive" >
+        <div class="table-responsive">
             <table class="table table-bordered" id="first-table">
                 <tbody>
                     <tr>
@@ -87,8 +88,7 @@
             </table>
         </div>
 
-        <div class="container mt-5">
-            <h3 class="text-center mb-4">RO System Parameters</h3>
+        <div class=" mt-5">
 
             <!-- Table to display the data -->
             <table class="table table-bordered" id="ro-table">
@@ -99,10 +99,6 @@
                         <th>PARAMETERS</th>
                         <th>RO # 1</th>
                         <th>RO # 2</th>
-                        <th>RO # 3</th>
-                        <th>RO # 4</th>
-                        <th>RO # 5</th>
-                        <th>RO # 6</th>
 
                     </tr>
                 </thead>
@@ -110,22 +106,17 @@
                     <!-- Pretreatment Section -->
                     <tr>
                         <td>1</td>
-                        <td rowspan="5"><strong>Pretreatment</strong></td>
+                        <td rowspan="5" style="text-align: center;">
+                            <img src="/pretreatment.PNG" alt="Left Image" />
+                        </td>
                         <td>Feed Water Temperature (°C)</td>
                         <td>28</td>
                         <td>28</td>
-                        <td>28</td>
-                        <td>28</td>
-                        <td>28</td>
-                        <td>28</td>
+
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Multimedia Inlet/Outlet (bar)</td>
-                        <td>3.6/3.4</td>
-                        <td>3.6/3.4</td>
-                        <td>3.6/3.4</td>
-                        <td>3.6/3.4</td>
                         <td>3.6/3.4</td>
                         <td>3.6/3.4</td>
 
@@ -135,20 +126,14 @@
                         <td>Multimedia Differential (bar)</td>
                         <td>0.2</td>
                         <td>0.2</td>
-                        <td>0.2</td>
-                        <td>0.2</td>
-                        <td>0.2</td>
-                        <td>0.2</td>
+
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Cartridge Filter Inlet/Outlet (bar)</td>
                         <td>3.4/2.0</td>
                         <td>3.4/2.0</td>
-                        <td>3.4/2.0</td>
-                        <td>3.4/2.0</td>
-                        <td>3.4/2.0</td>
-                        <td>3.4/2.0</td>
+
 
                     </tr>
                     <tr>
@@ -156,24 +141,20 @@
                         <td>Cartridge Filter Differential (bar)</td>
                         <td>1.4</td>
                         <td>1.4</td>
-                        <td>1.4</td>
-                        <td>1.4</td>
-                        <td>1.4</td>
-                        <td>1.4</td>
+
 
                     </tr>
 
                     <!-- Membrane Process Section -->
                     <tr>
                         <td>6</td>
-                        <td rowspan="7"><strong>Membrane Process</strong></td>
+                        <td rowspan="7" style="text-align: center;">
+                            <img src="/membrane.PNG" alt="Left Image" />
+                        </td>
                         <td>HP Pump Discharge Pressure (Psig)</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+
 
                     </tr>
                     <tr>
@@ -181,10 +162,7 @@
                         <td>Membrane Feed Pressure (A) (Psig)</td>
                         <td>156.6</td>
                         <td>156.6</td>
-                        <td>156.6</td>
-                        <td>156.6</td>
-                        <td>156.6</td>
-                        <td>156.6</td>
+
 
                     </tr>
                     <tr>
@@ -192,19 +170,12 @@
                         <td>Inter Stage Pressure (B) (Psig)</td>
                         <td>58</td>
                         <td>58</td>
-                        <td>58</td>
-                        <td>58</td>
-                        <td>58</td>
-                        <td>58</td>
+
 
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>Reject Pressure (C) (Psig)</td>
-                        <td>33.35</td>
-                        <td>33.35</td>
-                        <td>33.35</td>
-                        <td>33.35</td>
                         <td>33.35</td>
                         <td>33.35</td>
 
@@ -214,19 +185,12 @@
                         <td>Differential Pressure (A-B) (Psid)</td>
                         <td>98.6</td>
                         <td>98.6</td>
-                        <td>98.6</td>
-                        <td>98.6</td>
-                        <td>98.6</td>
-                        <td>98.6</td>
+
 
                     </tr>
                     <tr>
                         <td>11</td>
                         <td>Differential Pressure (B-C) (Psid)</td>
-                        <td>24.65</td>
-                        <td>24.65</td>
-                        <td>24.65</td>
-                        <td>24.65</td>
                         <td>24.65</td>
                         <td>24.65</td>
 
@@ -236,24 +200,20 @@
                         <td>Differential Pressure (A-C) (Psid)</td>
                         <td>123.25</td>
                         <td>123.25</td>
-                        <td>123.25</td>
-                        <td>123.25</td>
-                        <td>123.25</td>
-                        <td>123.25</td>
+
 
                     </tr>
 
                     <!-- Flow Section -->
                     <tr>
                         <td>13</td>
-                        <td rowspan="3"><strong>Flow</strong></td>
+                        <td rowspan="3" style="text-align: center;">
+                            <img src="/flow.PNG" alt="Left Image" />
+                        </td>
                         <td>Feed Flow Rate (m3/Hr)</td>
                         <td>27</td>
                         <td>27</td>
-                        <td>27</td>
-                        <td>27</td>
-                        <td>27</td>
-                        <td>27</td>
+
 
                     </tr>
                     <tr>
@@ -261,10 +221,7 @@
                         <td>Product Flow Rate (m3/Hr)</td>
                         <td>18</td>
                         <td>18</td>
-                        <td>18</td>
-                        <td>18</td>
-                        <td>18</td>
-                        <td>18</td>
+
 
                     </tr>
                     <tr>
@@ -272,24 +229,20 @@
                         <td>Reject Flow Rate (m3/Hr)</td>
                         <td>9</td>
                         <td>9</td>
-                        <td>9</td>
-                        <td>9</td>
-                        <td>9</td>
-                        <td>9</td>
+
 
                     </tr>
 
                     <!-- Performance Section -->
                     <tr>
                         <td>16</td>
-                        <td rowspan="4" class="vertical-text"><strong>Performance</strong></td>
+                        <td rowspan="4" style="text-align: center;">
+                            <img src="/performance.PNG" alt="Left Image" />
+                        </td>
                         <td>Salt Passage (%)</td>
                         <td>6.3</td>
                         <td>6.3</td>
-                        <td>6.3</td>
-                        <td>6.3</td>
-                        <td>6.3</td>
-                        <td>6.3</td>
+
 
                     </tr>
                     <tr>
@@ -297,10 +250,7 @@
                         <td>Salt Rejection (%)</td>
                         <td>93.8</td>
                         <td>93.8</td>
-                        <td>93.8</td>
-                        <td>93.8</td>
-                        <td>93.8</td>
-                        <td>93.8</td>
+
 
                     </tr>
                     <tr>
@@ -308,10 +258,7 @@
                         <td>Recovery (%)</td>
                         <td>66.67</td>
                         <td>66.67</td>
-                        <td>66.67</td>
-                        <td>66.67</td>
-                        <td>66.67</td>
-                        <td>66.67</td>
+
 
                     </tr>
                     <tr>
@@ -319,10 +266,7 @@
                         <td>Concentration Factor</td>
                         <td>3.0</td>
                         <td>3.0</td>
-                        <td>3.0</td>
-                        <td>3.0</td>
-                        <td>3.0</td>
-                        <td>3.0</td>
+
 
                     </tr>
                 </tbody>
@@ -486,112 +430,161 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.16/jspdf.plugin.autotable.min.js"></script>
 
-<script>
-    function generatePDF() {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
+    <script>
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
 
-        // Logos (Header)
-        doc.addImage("/cesLogo.png", "PNG", 10, 10, 40, 20);
-        doc.addImage("/iso.png", "PNG", 160, 10, 40, 25);
+            // Logos (Header)
+            doc.addImage("/cesLogo.png", "PNG", 10, 10, 40, 20);
+            doc.addImage("/iso.png", "PNG", 160, 10, 40, 25);
 
-        // Header Info
-        let y = 45;
+            // Header Info
+            let y = 45;
 
-        // Table 1
-        doc.autoTable({
-            html: '#first-table',
-            startY: y,
-            styles: { fontSize: 8 },
-            showHead: 'firstPage'  // Do not repeat the header when the table breaks across pages
-        });
+            // Table 1
+            doc.autoTable({
+                html: '#first-table',
+                startY: y,
+                styles: { fontSize: 8 },
+                showHead: 'firstPage',
+                theme: 'grid',
+                tableLineColor: [0, 0, 0],
+                alternateRowStyles: {},
+            });
 
-        // Update y after table 1
-        y = doc.lastAutoTable.finalY + 2;
+            // Update y after table 1
+            y = doc.lastAutoTable.finalY + 2;
 
-        // Table 2
-        doc.autoTable({
-            html: '#ro-table',
-            startY: y + 5,
-            styles: { fontSize: 8 },
-            showHead: 'firstPage'
-        });
+            // Table 2
+            const images = {
+                pretreatment: new Image(),
+                membrane: new Image(),
+                Flow: new Image(),
+                performance: new Image()
+            };
+            images.pretreatment.src = '/pretreatment.png';
+            images.membrane.src = '/membrane.png';
+            images.Flow.src = '/flow.png';
+            images.performance.src = '/performance.png';
+            doc.autoTable({
+                html: '#ro-table',
+                startY: y + 5,
+                columnStyles: { 1: { halign: 'center', fillColor: [0, 0, 0, 0] } },
+                theme: 'grid',
+                tableLineColor: [0, 0, 0],
+                alternateRowStyles: {},
+                styles: { fontSize: 10 },
+                showHead: 'firstPage',
+                didDrawCell: function (data) {
+                    // Image only in the "SECTIONS" column (index 1) of first row
+                    if (data.row.index === 0 && data.column.index === 1) {
+                        doc.addImage(images.pretreatment, 'PNG', data.cell.x + 10, data.cell.y + 8, 10, 25); // adjust size as needed
+                    }
+                    if (data.row.index === 5 && data.column.index === 1) {
+                        doc.addImage(images.membrane, 'PNG', data.cell.x + 10, data.cell.y + 15, 10, 25); // adjust size as needed
+                    }
+                    if (data.row.index === 12 && data.column.index === 1) {
+                        doc.addImage(images.Flow, 'PNG', data.cell.x + 10, data.cell.y + 0.5, 10, 25); // adjust size as needed
+                    }
+                    if (data.row.index === 15 && data.column.index === 1) {
+                        doc.addImage(images.performance, 'PNG', data.cell.x + 10, data.cell.y + 5, 10, 25); // adjust size as needed
+                    }
+                },
 
-        // Update y after table 2
-        y = doc.lastAutoTable.finalY + 10;
+            });
 
-        // Table 3
-        doc.autoTable({
-            html: '#second-table',
-            startY: y,
-            styles: { fontSize: 8 },
-            showHead: 'firstPage'
-        });
 
-        // Update y after table 3
-        y = doc.lastAutoTable.finalY + 10;
+            // Update y after table 2
+            y = doc.lastAutoTable.finalY + 10;
 
-        // Table 4
-        doc.autoTable({
-            html: '#third-table',
-            startY: y,
-            styles: { fontSize: 8 },
-            showHead: 'firstPage'
-        });
+            // Table 3
+            doc.autoTable({
+                html: '#second-table',
+                startY: y,
+                styles: { fontSize: 8 },
+                showHead: 'firstPage', theme: 'grid',
+                tableLineColor: [0, 0, 0],
+                alternateRowStyles: {},
 
-        y = doc.lastAutoTable.finalY + 5;
-        doc.setFontSize(12);
-        doc.text("Chemical Dosage Profile", 10, y);
-        y += 6;
+            });
 
-        doc.autoTable({
-            html: '#fourth-table',
-            startY: y,
-            styles: { fontSize: 8 },
-            showHead: 'firstPage'
-        });
+            // Update y after table 3
+            y = doc.lastAutoTable.finalY + 10;
 
-        y = doc.lastAutoTable.finalY + 10;
+            // Table 4
+            doc.autoTable({
+                html: '#third-table',
+                startY: y,
+                styles: { fontSize: 8 },
+                showHead: 'firstPage',
+                theme: 'grid',
+                tableLineColor: [0, 0, 0],
+                alternateRowStyles: {},
+            });
 
-        // Observations & Recommendations Text
-        doc.setFontSize(12);
-        doc.text("Observations & Recommendation", 10, y);
-        y += 7;
-        doc.setFontSize(10);
+            y = doc.lastAutoTable.finalY + 5;
+            doc.setFontSize(12);
+            doc.text("Chemical Dosage Profile", 15, y);
+            y += 6;
 
-        // Wrap the textarea text manually
-        const observationText = `Product flow has been recovered with partial recovery of membrane feed pressure and differential pressure across membrane. The feed water in use is classified as "Surface Water" and rich in organic foulant and fine silt with SDI 15 minutes is immeasurable and the 0.45 micron choked in 90 seconds. This is recommended to take product flow 18 m3 per hour @ 50% recovery in order to ensure smooth and trouble-free operation.`;
+            doc.autoTable({
+                html: '#fourth-table',
+                startY: y,
+                styles: { fontSize: 8 },
+                showHead: 'firstPage',
 
-        const splitText = doc.splitTextToSize(observationText, 190); // Wrap text to fit page width
-        doc.text(splitText, 10, y);
-        y += splitText.length * 5 + 5; // Adjust Y based on number of lines
+            });
 
-        // Get total number of pages
-        const pageCount = doc.internal.getNumberOfPages();
+            y = doc.lastAutoTable.finalY + 10;
 
-        // Go to last page
-        doc.setPage(pageCount);
+            // Observations & Recommendations Text
+            doc.setFontSize(12);
+            doc.text("Observations & Recommendation", 15, y);
+            y += 7;
+            doc.setFontSize(10);
 
-        // Add signature images above footer
-        const pageHeight = doc.internal.pageSize.getHeight();
-        const signatureY = pageHeight - 70;  // Increase Y position for signatures to avoid footer overlap
+            // Wrap the textarea text manually
+            const observationText = `Product flow has been recovered with partial recovery of membrane feed pressure and differential pressure across membrane. The feed water in use is classified as "Surface Water" and rich in organic foulant and fine silt with SDI 15 minutes is immeasurable and the 0.45 micron choked in 90 seconds. This is recommended to take product flow 18 m3 per hour @ 50% recovery in order to ensure smooth and trouble-free operation.`;
 
-        // Signature 1 (Service Engineer)
-        doc.addImage("/serviceengineer_Signature.png", "PNG", 10, signatureY, 60, 20);  // Adjust size and position as needed
-        doc.text("Service Engineer", 10, signatureY + 25);  // Label below the first signature
+            const splitText = doc.splitTextToSize(observationText, 180); // Wrap text to fit page width
+            doc.text(splitText, 15, y);
+            y += splitText.length * 5 + 5; // Adjust Y based on number of lines
 
-        // Signature 2 (Customer) moved further to the right
-        const signature2X = 140; // Increased X position to move it to the right
-        doc.addImage("/customer_Signature.png", "PNG", signature2X, signatureY, 60, 20);  // Adjust size and position as needed
-        doc.text("Customer", signature2X+30, signatureY + 25);  // Label below the second signature
+            // Get total number of pages
+            const pageCount = doc.internal.getNumberOfPages();
 
-        // Add footer image at the bottom of the last page
-        doc.addImage("/footer.png", "PNG", 10, pageHeight - 20, 190, 12);  // Adjust position/size as needed
+            // Go to last page
+            doc.setPage(pageCount);
 
-        // Save PDF
-        doc.save('RO_System_Parameters_Report.pdf');
-    }
-</script>
+            // Add signature images above footer
+            const pageHeight = doc.internal.pageSize.getHeight();
+            const signatureY = pageHeight - 60;  // Increase Y position for signatures to avoid footer overlap
+
+            // Signature 1 (Service Engineer)
+            doc.addImage("/serviceengineer_Signature.png", "PNG", 15, signatureY, 60, 20);  // Adjust size and position as needed
+            doc.text("Service Engineer", 15, signatureY + 25);  // Label below the first signature
+
+            // Signature 2 (Customer) moved further to the right
+            const signature2X = 140; // Increased X position to move it to the right
+            doc.addImage("/customer_Signature.png", "PNG", signature2X, signatureY, 60, 20);  // Adjust size and position as needed
+            doc.text("Customer", signature2X + 30, signatureY + 25);  // Label below the second signature
+
+            // Add footer image at the bottom of the last page
+            doc.addImage("/footer.png", "PNG", 10, pageHeight - 20, 190, 12);  // Adjust position/size as needed
+            const pageWidth = doc.internal.pageSize.getWidth();
+
+            for (let i = 1; i <= pageCount; i++) {
+                doc.setPage(i);
+                doc.setLineWidth(0.5); // Border thickness
+                doc.setDrawColor(150, 150, 150);
+                 doc.rect(5, 5, pageWidth - 10, pageHeight - 10); // Creates a margin of 5mm all around
+            }
+
+            // Save PDF
+            doc.save('RO_System_Parameters_Report.pdf');
+        }
+    </script>
 
 
 
